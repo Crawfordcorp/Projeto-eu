@@ -31,4 +31,4 @@ jobs:
       
       - name: Deploy on bohr.io
         uses: bohr-io/action@main
-        with: Projeto-eu/Projeto/public/
+        with: Projeto/public/index.html
