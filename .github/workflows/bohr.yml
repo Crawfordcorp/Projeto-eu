@@ -1,13 +1,37 @@
 name: bohr.io deploy
+
 on: 
   push:
+    branches:
+      - main  # Altere para a branch que você usa para deploy
   repository_dispatch:
     types: [bohr-dispatch]
+
 permissions: write-all
+
 jobs:
   deploy:
     name: Deploy on bohr.io
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
-      - uses: bohr-io/action@main
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Ajuste para a versão do Node.js que você usa
+      
+      - name: Install dependencies
+        run: npm install  # Instale as dependências, se necessário
+
+      - name: Build project
+        run: npm run build  # Construa o projeto, se necessário
+      
+      - name: Deploy on bohr.io
+        uses: bohr-io/action@main
+        with:
+          # Configure os parâmetros necessários aqui
+          # Por exemplo:
+          # deploy-directory: ./public
