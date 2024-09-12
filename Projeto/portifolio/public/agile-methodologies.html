@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologias Ágeis - Meu Portfólio</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #1f1f1f;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        header h1:hover {
+            color: #ff2222;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #ff2222;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Seção Metodologias Ágeis */
+        .agile-methodologies {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            padding: 3rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+
+        .agile-methodologies h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #ff2222;
+        }
+
+        .agile-methodologies p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #e0e0e0;
+        }
+
+        .methodology-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .methodology-item {
+            background: #1f1f1f;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .methodology-item:hover {
+            background: #333;
+            transform: translateY(-5px);
+        }
+
+        .methodology-item h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #ff2222;
+            text-align: center;
+        }
+
+        .methodology-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: #e0e0e0;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.5);
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="education.html">Formação Acadêmica</a></li>
+                    <li><a href="experience.html">Experiências</a></li>
+                    <li><a href="skills.html">Habilidades e Competências</a></li>
+                    <li><a href="agile-methodologies.html">Metodologias Ágeis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="agile-methodologies">
+            <div class="container">
+                <h2>Metodologias Ágeis</h2>
+                <p>Conhecimento em diversas metodologias ágeis, incluindo:</p>
+                <div class="methodology-list">
+                    <div class="methodology-item">
+                        <h3>Scrum</h3>
+                        <p>Uma abordagem iterativa e incremental que divide projetos em sprints curtos para melhorar o gerenciamento e o desenvolvimento contínuo.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>Kanban</h3>
+                        <p>Um método visual para gerenciamento de tarefas e fluxo de trabalho, ajudando a otimizar e controlar a produção e o progresso das atividades.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>Ishikawa</h3>
+                        <p>Também conhecido como diagrama de espinha de peixe, é uma ferramenta para identificar causas e efeitos de problemas em processos.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>ITIL 4</h3>
+                        <p>Uma framework de boas práticas para gerenciamento de serviços de TI, focando na entrega de valor contínuo e na eficiência dos processos.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>5W2H</h3>
+                        <p>Uma técnica de análise que ajuda a identificar o "quê", "por quê", "onde", "quando", "quem", "como" e "quanto" de um problema ou situação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 David Aleixo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
