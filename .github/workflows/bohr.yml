@@ -3,7 +3,7 @@ name: bohr.io deploy
 on: 
   push:
     branches:
-      - main  # Altere para a branch que você usa para deploy
+      - main
   repository_dispatch:
     types: [bohr-dispatch]
 
@@ -21,17 +21,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Ajuste para a versão do Node.js que você usa
+          node-version: '14'
       
       - name: Install dependencies
-        run: npm install  # Instale as dependências, se necessário
+        run: npm install
 
       - name: Build project
-        run: npm run build  # Construa o projeto, se necessário
+        run: npm run build
       
       - name: Deploy on bohr.io
         uses: bohr-io/action@main
-        with:
-          # Configure os parâmetros necessários aqui
-          # Por exemplo:
-          # deploy-directory: ./public
+        with: ./public
