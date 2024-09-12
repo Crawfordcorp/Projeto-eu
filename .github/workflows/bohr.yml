@@ -29,43 +29,10 @@ jobs:
       - name: Build project
         run: npm run build
       
-      - name: Deploy on bohr.io
-        uses: bohr-io/action@main
-        with: name: bohr.io deploy
+      - name: List files in the build directory
+        run: ls -la ./Projeto/public
 
-on: 
-  push:
-    branches:
-      - main
-  repository_dispatch:
-    types: [bohr-dispatch]
-
-permissions: write-all
-
-jobs:
-  deploy:
-    name: Deploy on bohr.io
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-      
       - name: Deploy on bohr.io
         uses: bohr-io/action@main
         with:
           path: ./Projeto/public
-
-- name: List files in the build directory
-  run: ls -la ./Projeto/public
